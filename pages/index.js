@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Button from "../components/button";
 
 export default function Home() {
   return (
@@ -12,19 +13,79 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className="min-h-screen flex flex-row ">
-          <div className="min-h-full w-full border-2 border-rose-500 grid place-items-center">
+        {/* ------------ Landing ------------------ */}
+        <div className="flex min-h-screen flex-row ">
+          <div className="min-h-full w-full grid justify-items-start items-center">
             <div>
-              <h1 className="text-5xl font-bold my-5">Slemani Nwe</h1>
-              <p className="text-2xl font-light">14 years of experience of importing and distributing, and still continuing </p>
+              <h1 className="text-5xl font-bold">Slemani Nwe</h1>
+              <p className="text-2xl font-light  my-7">
+                14 years of experience of importing and distributing, and still
+                continuing
+              </p>
+              <Button text="Learn more"></Button>
             </div>
           </div>
-          <div className="min-h-full w-full border-2 border-teal-500 grid place-items-center">
-            <div className={styles.landingBg+' h-5/6 w-3/6'}>
-               <div className={styles.overlay}>
+          <div className="min-h-full w-full grid justify-items-end items-center">
+            <div className={styles.landingLogo + " h-3/6 w-3/6"}></div>
+          </div>
+        </div>
 
-               </div>
+		<div className={styles.whitespace}></div>
+        {/* ------------ About ------------------ */}
+        <div className="flex min-h-screen flex-row ">
+          <div className="min-h-full w-full grid justify-items-start items-center">
+            <div className={styles.aboutBg + " h-5/6 w-4/6"}>
+              <div className={styles.overlay}></div>
             </div>
+          </div>
+          <div className="min-h-full w-full grid justify-items-start items-center">
+            <div>
+              <h1 className="text-5xl font-bold">Slemani Nwe</h1>
+              <p className="text-2xl font-light  my-7">
+                Our strong relationship with both our suppliers and clients
+                enables us to deliver the most popular brands in our area at the
+                best possible prices.
+                <br></br>
+                <br></br>
+                Our rapid success we believe is as a result of this, the
+                competitive prices and the personal service that we provide.
+              </p>
+              <Button text="Learn more"></Button>
+            </div>
+          </div>
+        </div>
+
+		<div className={styles.whitespace}></div>
+
+        {/* ------------ Brands ------------------ */}
+
+        <div className="min-h-screen ">
+
+          <div className="grid grid-flow-row auto-rows-max place-items-center mb-56">
+				<div className={styles.landingLogo + " h-36 min-w-full"}></div>
+				<div className="my-7"></div>
+				<h1 className="text-3xl font-bold">
+				Slemani Nwe already have several power Brands.
+				</h1>
+          </div>
+
+          <div className="brands grid grid-cols-4 place-items-center ">
+				<img
+				className="h-28"
+				src="../assets/brands/gullon.png"
+				></img>
+				<img
+				className="h-28"
+				src="../assets/brands/diet.png"
+				></img>
+				<img
+				className="h-28"
+				src="../assets/brands/goodday.png"
+				></img>
+				<img
+				className="h-28"
+				src="../assets/brands/costa.png"
+				></img>
           </div>
         </div>
       </main>

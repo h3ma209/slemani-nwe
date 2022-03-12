@@ -1,0 +1,10 @@
+.Btn{
+    background-color: #133630;
+    padding: 13px 25px; 
+    color:white;
+    transition: all 0.2s ease-in-out;
+}
+
+.Btn:hover{
+    background-color: rgba(19, 54, 48,0.8);
+}

@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 15vh;
 }
 
 .main {
@@ -8,10 +8,13 @@
 }
 
 
-.landingBg{
-  background:url('../assets/landing-pic.png') no-repeat center center ;
+.landingLogo{
+  background:url('/assets/logo1.png') no-repeat center center ;
+  background-size:contain;
+}
+.aboutBg{
+  background:url('/assets/landing-pic.png') no-repeat center center ;
   background-size:cover;
-  
 }
 
 .overlay{
@@ -36,6 +39,10 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.whitespace{
+  margin: 20vh;
 }
 
 

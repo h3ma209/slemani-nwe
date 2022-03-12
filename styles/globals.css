@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 * {
   font-family: 'Montserrat', sans-serif !important;
+  color:#414141;
 }
 html,
 body {
@@ -19,4 +21,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+p{
+  max-width: 100%;
 }
