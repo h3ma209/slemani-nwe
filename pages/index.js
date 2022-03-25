@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Button from "../components/button";
+import Product from "../components/Products";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
           </div>
         </div>
 
-		<div className={styles.whitespace}></div>
+        <div className={styles.whitespace}></div>
         {/* ------------ About ------------------ */}
         <div className="flex min-h-screen flex-row ">
           <div className="min-h-full w-full grid justify-items-start items-center">
@@ -42,6 +43,11 @@ export default function Home() {
             <div>
               <h1 className="text-5xl font-bold">Slemani Nwe</h1>
               <p className="text-2xl font-light  my-7">
+                Slemani Nwe  is an Importer and Distributer company based in the
+                Iraq. We have been trading for over 14 years and are passionate
+                about FMCG.
+                <br></br>
+                <br></br>
                 Our strong relationship with both our suppliers and clients
                 enables us to deliver the most popular brands in our area at the
                 best possible prices.
@@ -55,39 +61,30 @@ export default function Home() {
           </div>
         </div>
 
-		<div className={styles.whitespace}></div>
+        <div className={styles.whitespace}></div>
 
         {/* ------------ Brands ------------------ */}
 
-        <div className="min-h-screen ">
-
+        <div className="min-h-screen">
           <div className="grid grid-flow-row auto-rows-max place-items-center mb-56">
-				<div className={styles.landingLogo + " h-36 min-w-full"}></div>
-				<div className="my-7"></div>
-				<h1 className="text-3xl font-bold">
-				Slemani Nwe already have several power Brands.
-				</h1>
+            <div className={styles.landingLogo + " h-36 min-w-full"}></div>
+            <div className="my-7"></div>
+            <h1 className="text-3xl font-bold">
+              Slemani Nwe already have several power Brands.
+            </h1>
           </div>
 
           <div className="brands grid grid-cols-4 place-items-center ">
-				<img
-				className="h-28"
-				src="../assets/brands/gullon.png"
-				></img>
-				<img
-				className="h-28"
-				src="../assets/brands/diet.png"
-				></img>
-				<img
-				className="h-28"
-				src="../assets/brands/goodday.png"
-				></img>
-				<img
-				className="h-28"
-				src="../assets/brands/costa.png"
-				></img>
+            <img className="h-28" src="../assets/brands/gullon.png"></img>
+            <img className="h-28" src="../assets/brands/diet.png"></img>
+            <img className="h-28" src="../assets/brands/goodday.png"></img>
+            <img className="h-28" src="../assets/brands/costa.png"></img>
           </div>
         </div>
+
+        {/* ------------ Products ------------------ */}
+        <Product image='/assets/Coil.jpg'></Product>
+
       </main>
 
       <footer className={styles.footer}>
