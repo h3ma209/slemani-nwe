@@ -26,7 +26,7 @@ function Product(props) {
           <p className="text-2xl font-light  my-7">
             {description}
           </p>
-          <Button text="Learn more"  ></Button>
+          <Button text="Learn more" link={props.link}  ></Button>
         </div>
       </div>
     </div>

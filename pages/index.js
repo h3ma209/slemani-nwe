@@ -13,7 +13,13 @@ export default function Home() {
       link: "https://www.oliocostadoro.com/us/",
       image: "/assets/Coil.jpg",
     },
-    { title: "Good Day Cappucino", image: "/assets/goodday.png", link: "", description: "One of the italy’s finest and high quality olive oil, the unfiltered extra virgin olive oil offers high neutrients" },
+    {
+      title: "Good Day Cappucino",
+      image: "/assets/goodday.png",
+      link: "#",
+      description:
+        "One of the italy’s finest and high quality olive oil, the unfiltered extra virgin olive oil offers high neutrients",
+    },
     // { title: "", image: "", link: "", description: "" },
   ];
 
@@ -95,31 +101,93 @@ export default function Home() {
         </div>
 
         {/* ------------ Products ------------------ */}
-        {
-          BrandProducts.map((product, index) => {
-            let toRight = false;
-            if (index % 2 == 0) {
-              toRight = true
-            }
+        {BrandProducts.map((product, index) => {
+          let toRight = false;
+          if (index % 2 == 0) {
+            toRight = true;
+          }
+          return (
+            <Product
+              right={toRight}
+              title={product.title}
+              description={product.description}
+              image={product.image}
+              link={product.link}
+              key={index}
+            ></Product>
+          );
+        })}
+        <div className={styles.whitespace}></div>
+        {/* ------------ Contact ------------------ */}
 
-            
-            
-            return(<Product right={toRight} title={product.title} description={product.description} image={product.image} link={product.link} key={index}></Product>)
-          })
-        }
-        
+        <div className="min-h-screen">
+          <div className={styles.aboutBg}>
+            <div className={styles.overlay}>
+              <div className="flex min-h-screen flex-row ">
+                <div className="min-h-full w-full grid justify-items-center items-center">
+                  <div className="informations ">
+                    <div className="grid gap-10">
+                      {[
+                        {
+                          icon: "/assets/icons/1.svg",
+                          text: "Mawlawy Street 13, Sulaimanyah, iraq",
+                        },
+                        {
+                          icon: "/assets/icons/3.svg",
+                          text: "+964-770-152-0589",
+                        },
+                        {
+                          icon: "/assets/icons/2.svg",
+                          text: "slemaninwe@mail.com",
+                        },
+                      ].map((item, index) => {
+                        return (
+                          <div className="info inline-flex  items-start">
+                            <img src={item.icon}></img>
+                            <div className="mx-3"></div>
+                            <span
+                              className="text-xl"
+                              style={{ color: "white" }}
+                            >
+                              {item.text}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+                <div className="divider"></div>
+                <div className="min-h-full w-full grid justify-items-center items-center">
+                  <div className="map-container">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1622.9325314372772!2d45.436823005538955!3d35.55703460906854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e392b73b8d1c141!2sslemani%20nwe%20co.!5e0!3m2!1sen!2siq!4v1649506314558!5m2!1sen!2siq"
+                      width="600"
+                      height="450"
+                      style={{border:0}}
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* <Product right="true" image='/assets/goodday.png'></Product> */}
       </main>
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://h3ma.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          Created By 
+          <span className={styles.logo+" mx-3 underline"}>
+            <a> H E M A</a>
           </span>
         </a>
       </footer>

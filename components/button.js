@@ -3,7 +3,7 @@ import styles from './button.module.css';
 function Button(props){
     return(
         <div className={styles.BtnCont}>
-            <a className={styles.Btn}>{props.text}</a>
+            <a href={props.link} className={styles.Btn}>{props.text}</a>
         </div>
     );
 }
