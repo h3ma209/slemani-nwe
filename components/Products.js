@@ -1,6 +1,13 @@
 import "./product.module.css";
+import Button from "./button";
 
 function Product(props) {
+
+  const title = props.title;
+  const description = props.description;
+  const link = props.link;
+  const image = props.image;
+
   return (
     <div
       className={
@@ -8,17 +15,17 @@ function Product(props) {
         (props.right ? "flex-row-reverse": "flex-row")
       }
     >
-      <div className="product-image w-full grid justify-items-start items-center">
-        <img className="max-h-full" src={props.image} alt="product" />
+      <div className="product-image w-full grid justify-items-center items-center">
+        <img className="max-h-full" src={image} alt={title}  />
       </div>
-      <div className="space m-6"></div>
-      <div className="product-info w-full grid justify-items-start items-center">
-        <div>
-          <h1 className="text-5xl font-bold">Costadoro olive oil </h1>
+      <div className="space m-7"></div>
+      <div className="product-info w-full grid justify-items-center items-center">
+        <div className="max-w-xl">
+          <h1 className="text-5xl font-bold">{title}</h1>
           <p className="text-2xl font-light  my-7">
-            One of the italy’s finest and high quality olive oil, the unfiltered
-            extra virgin olive oil offers high neutrients
+            {description}
           </p>
+          <Button text="Learn more"  ></Button>
         </div>
       </div>
     </div>
