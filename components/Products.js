@@ -7,12 +7,13 @@ function Product(props) {
   const description = props.description;
   const link = props.link;
   const image = props.image;
+  const toRight = props.right;
 
   return (
     <div
       className={
         "product-container w-full flex min-h-screen " +
-        (props.right ? "flex-row-reverse": "flex-row")
+        (toRight ? "flex-row-reverse": "flex-row")
       }
     >
       <div className="product-image w-full grid justify-items-center items-center">

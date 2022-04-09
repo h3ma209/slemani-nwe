@@ -5,6 +5,18 @@ import Button from "../components/button";
 import Product from "../components/Products";
 
 export default function Home() {
+  const BrandProducts = [
+    {
+      title: "Costadoro Olive Oil ",
+      description:
+        "One of the italy’s finest and high quality olive oil, the unfiltered extra virgin olive oil offers high neutrients",
+      link: "https://www.oliocostadoro.com/us/",
+      image: "/assets/Coil.jpg",
+    },
+    { title: "Good Day Cappucino", image: "/assets/goodday.png", link: "", description: "One of the italy’s finest and high quality olive oil, the unfiltered extra virgin olive oil offers high neutrients" },
+    // { title: "", image: "", link: "", description: "" },
+  ];
+
   return (
     <div className={styles.container}>
       <Head>
@@ -83,13 +95,19 @@ export default function Home() {
         </div>
 
         {/* ------------ Products ------------------ */}
-        <Product
-          image="/assets/Coil.jpg"
-          title="Costadoro olive oil"
-          description="One of the italy’s finest and high quality olive oil,
-the unfiltered extra virgin olive oil offers
-high neutrients"
-        ></Product>
+        {
+          BrandProducts.map((product, index) => {
+            let toRight = false;
+            if (index % 2 == 0) {
+              toRight = true
+            }
+
+            
+            
+            return(<Product right={toRight} title={product.title} description={product.description} image={product.image} link={product.link} key={index}></Product>)
+          })
+        }
+        
         {/* <Product right="true" image='/assets/goodday.png'></Product> */}
       </main>
 
