@@ -145,7 +145,7 @@ export default function Home() {
                         },
                       ].map((item, index) => {
                         return (
-                          <div className="info inline-flex  items-center">
+                          <div className="info inline-flex  items-center" key={index}>
                             <img src={item.icon}></img>
                             <div className="mx-3"></div>
                             <span className="text-l" style={{ color: "white" }}>
