@@ -22,8 +22,8 @@ function Product(props) {
       <div className="space m-7"></div>
       <div className="product-info w-full grid justify-items-center items-center">
         <div className="max-w-xl">
-          <h1 className="text-4xl font-bold">{title}</h1>
-          <p className="text-xl font-light  my-7">
+          <h1 className="text-4xl md:text-5xl font-bold">{title}</h1>
+          <p className="text-xl md:text-2xl font-light  my-7">
             {description}
           </p>
           <Button text="Learn more" link={props.link}  ></Button>
