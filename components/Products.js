@@ -12,8 +12,8 @@ function Product(props) {
   return (
     <div
       className={
-        "product-container w-full flex min-h-screen " +
-        (toRight ? "flex-row-reverse": "flex-row")
+        "product-container w-full flex min-h-screen flex-col " +
+        (toRight ? "md:flex-row-reverse": "md:flex-row")
       }
     >
       <div className="product-image w-full grid justify-items-center items-center">
@@ -22,8 +22,8 @@ function Product(props) {
       <div className="space m-7"></div>
       <div className="product-info w-full grid justify-items-center items-center">
         <div className="max-w-xl">
-          <h1 className="text-5xl font-bold">{title}</h1>
-          <p className="text-2xl font-light  my-7">
+          <h1 className="text-4xl font-bold">{title}</h1>
+          <p className="text-xl font-light  my-7">
             {description}
           </p>
           <Button text="Learn more" link={props.link}  ></Button>

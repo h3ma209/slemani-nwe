@@ -1,9 +1,15 @@
 .container {
-  padding: 0 15vh;
+  padding: 0 10vw;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
 }
 
 .main {
-  min-height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  
 }
 .landingLogo{
   background:url('/assets/logo1.png') no-repeat center center ;
@@ -38,6 +44,7 @@
   align-items: center;
   flex-grow: 1;
 }
+
 
 .whitespace{
   margin: 20vh;

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import styles from "../styles/Home.module.css";
 import Button from "../components/button";
 import Product from "../components/Products";
@@ -33,34 +33,34 @@ export default function Home() {
 
       <main className={styles.main}>
         {/* ------------ Landing ------------------ */}
-        <div className="flex min-h-screen flex-row ">
-          <div className="min-h-full w-full grid justify-items-start items-center">
+        <div className="flex flex-wrap flex-col-reverse justify-evenly min-h-screen md:flex-row  ">
+          <div className="min-h-full w-full grid justify-items-center md:justify-items-start items-center">
             <div>
-              <h1 className="text-5xl font-bold">Slemani Nwe</h1>
-              <p className="text-2xl font-light  my-7">
+              <h1 className="text-4xl md:text-5xl font-bold">Slemani Nwe</h1>
+              <p className=" text-xl md:text-2xl font-light  my-7">
                 14 years of experience of importing and distributing, and still
                 continuing
               </p>
               <Button text="Learn more"></Button>
             </div>
           </div>
-          <div className="min-h-full w-full grid justify-items-end items-center">
-            <div className={styles.landingLogo + " h-3/6 w-3/6"}></div>
+          <div className="min-h-full w-full grid justify-items-center md:justify-items-end items-center">
+            <img src="/assets/logo1.png" alt="logo" className="w-5/6" />
           </div>
         </div>
 
         <div className={styles.whitespace}></div>
         {/* ------------ About ------------------ */}
-        <div className="flex min-h-screen flex-row ">
-          <div className="min-h-full w-full grid justify-items-start items-center">
-            <div className={styles.aboutBg + " h-5/6 w-4/6"}>
+        <div className="relative flex flex-wrap flex-col-reverse justify-evenly min-h-screen md:flex-row  ">
+          <div className="min-h-full w-full grid justify-items-center md:justify-items-start items-center">
+            <div className={styles.aboutBg + " h-full w-full md:h-5/6 md:w-4/6"}>
               <div className={styles.overlay}></div>
             </div>
           </div>
-          <div className="min-h-full w-full grid justify-items-start items-center">
-            <div>
-              <h1 className="text-5xl font-bold">Slemani Nwe</h1>
-              <p className="text-2xl font-light  my-7">
+          <div className="grid justify-items-start items-center">
+            <div >
+              <h1 className="text-4xl md:text-5xl font-bold">Slemani Nwe</h1>
+              <p className="text-xl md:text-2xl font-light  my-7">
                 Slemani Nwe  is an Importer and Distributer company based in the
                 Iraq. We have been trading for over 14 years and are passionate
                 about FMCG.
@@ -84,21 +84,22 @@ export default function Home() {
         {/* ------------ Brands ------------------ */}
 
         <div className="min-h-screen">
-          <div className="grid grid-flow-row auto-rows-max place-items-center mb-56">
+          <div className="grid grid-flow-row auto-rows-max place-items-center mb-40 md:mb-56">
             <div className={styles.landingLogo + " h-36 min-w-full"}></div>
             <div className="my-7"></div>
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-xl text-center font-bold">
               Slemani Nwe already have several power Brands.
             </h1>
           </div>
 
-          <div className="brands grid grid-cols-4 place-items-center ">
+          <div className="brands grid grid-row-4 md:grid-cols-4 place-items-center gap-12 ">
             <img className="h-28" src="../assets/brands/gullon.png"></img>
             <img className="h-28" src="../assets/brands/diet.png"></img>
             <img className="h-28" src="../assets/brands/goodday.png"></img>
             <img className="h-28" src="../assets/brands/costa.png"></img>
           </div>
         </div>
+        <div className={styles.whitespace}></div>
 
         {/* ------------ Products ------------------ */}
         {BrandProducts.map((product, index) => {
@@ -122,8 +123,8 @@ export default function Home() {
 
         <div className="min-h-screen">
           <div className={styles.aboutBg}>
-            <div className={styles.overlay}>
-              <div className="flex min-h-screen flex-row ">
+            <div className={styles.overlay + " px-3"}>
+              <div className="flex min-h-screen md:flex-row flex-col justify-around ">
                 <div className="min-h-full w-full grid justify-items-center items-center">
                   <div className="informations ">
                     <div className="grid gap-10">
@@ -142,11 +143,11 @@ export default function Home() {
                         },
                       ].map((item, index) => {
                         return (
-                          <div className="info inline-flex  items-start">
+                          <div className="info inline-flex  items-center">
                             <img src={item.icon}></img>
                             <div className="mx-3"></div>
                             <span
-                              className="text-xl"
+                              className="text-l"
                               style={{ color: "white" }}
                             >
                               {item.text}
@@ -157,19 +158,19 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="divider"></div>
                 <div className="min-h-full w-full grid justify-items-center items-center">
-                  <div className="map-container">
+                  {/* <div className="map-container"> */}
                     <iframe
+                      className="h-5/6 w-5/6"
                       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1622.9325314372772!2d45.436823005538955!3d35.55703460906854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e392b73b8d1c141!2sslemani%20nwe%20co.!5e0!3m2!1sen!2siq!4v1649506314558!5m2!1sen!2siq"
                       width="600"
                       height="450"
                       style={{border:0}}
-                      allowfullscreen=""
+                      allowFullScreen=""
                       loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
+                      referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
-                  </div>
+                  {/* </div> */}
                 </div>
               </div>
             </div>
