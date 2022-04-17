@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Button from "../components/button";
 import Product from "../components/Products";
@@ -33,8 +33,10 @@ export default function Home() {
 
       <main className={styles.main}>
         {/* ------------ Landing ------------------ */}
-        <div className="flex flex-wrap flex-col-reverse md:flex md:flex-row md:flex-nowrap justify-evenly min-h-screen   ">
-          <div className="min-h-full w-full grid justify-items-center md:justify-items-start items-center">
+        <div className="h-screen flex flex-wrap flex-col-reverse md:flex md:flex-row md:flex-nowrap justify-evenly ">
+
+
+          <div className="md:min-h-full w-full grid justify-items-center md:justify-items-start items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold">Slemani Nwe</h1>
               <p className=" text-xl md:text-2xl font-light  my-7">
@@ -44,15 +46,19 @@ export default function Home() {
               <Button text="Learn more"></Button>
             </div>
           </div>
-          <div className="min-h-full w-full grid justify-items-center md:justify-items-end items-center">
-            <img src="/assets/logo1.png" alt="logo" className="h-5/6 md:h-3/6" />
+
+
+          <div className="relative md:min-h-full w-full grid grid-col-1 justify-items-center md:justify-end items-center">
+            <img  src="/assets/logo1.png" alt="logo" className="w-5/6 md:w-auto md:h-3/6 " />
           </div>
+
+
         </div>
 
         <div className={styles.whitespace}></div>
         {/* ------------ About ------------------ */}
         <div className="relative flex flex-wrap flex-col-reverse md:flex md:flex-row md:flex-nowrap  justify-evenly min-h-screen   ">
-          <div className="min-h-full w-full grid justify-items-center md:justify-items-start items-center">
+          <div className="relative min-h-full w-full flex justify-center  md:justify-start items-center">
             <div
               className={styles.aboutBg + " h-full w-full md:h-5/6 md:w-4/6"}
             >
@@ -123,11 +129,11 @@ export default function Home() {
         <div className={styles.whitespace}></div>
         {/* ------------ Contact ------------------ */}
 
-        <div className="min-h-screen">
+        <div className="md:min-h-screen">
           <div className={styles.aboutBg}>
-            <div className={styles.overlay + " px-3"}>
-              <div className="flex min-h-screen md:flex-row flex-col justify-around ">
-                <div className="min-h-full w-full grid justify-items-center items-center">
+            <div className={styles.overlay + " px-6"}>
+              <div className="min-h-screen grid md:flex md:flex-row  justify-around ">
+                <div className="min-h-full w-full grid grid-row-1 justify-items-center items-center">
                   <div className="informations ">
                     <div className="grid gap-10">
                       {[
@@ -157,10 +163,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="min-h-full w-full grid justify-items-center items-center">
+                <div className="min-h-full w-full grid-row-1 grid justify-items-center items-center">
                   {/* <div className="map-container"> */}
                   <iframe
-                    className="h-5/6 w-5/6"
+                    className="h-5/6 w-full md:h-5/6 md:w-5/6"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1622.9325314372772!2d45.436823005538955!3d35.55703460906854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e392b73b8d1c141!2sslemani%20nwe%20co.!5e0!3m2!1sen!2siq!4v1649506314558!5m2!1sen!2siq"
                     width="600"
                     height="450"

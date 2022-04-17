@@ -16,7 +16,7 @@ function Product(props) {
         (toRight ? "md:flex-row-reverse": "md:flex-row")
       }
     >
-      <div className="product-image w-full grid justify-items-center items-center">
+      <div className="product-image w-full grid grid-rows-1 justify-items-center items-center">
         <img className="max-h-full" src={image} alt={title}  />
       </div>
       <div className="space m-7"></div>
